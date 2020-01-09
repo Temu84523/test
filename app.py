@@ -91,12 +91,8 @@ class Spider():
         global s
         s = table.to_json(orient='records', force_ascii=False)
         
-@app.route('/', methods=['POST'])
+@app.route('/')
 def test():
-    data=request.get_json()
-    global name     
-    name=data['name']
-    Spider().run(name)
     return s
 @app.route('/press', methods=['POST'])
 def test1():
@@ -104,11 +100,11 @@ def test1():
     global name     
     name=data['name']
     Spider().run(name)
-
+    return s
 
 @app.errorhandler(404)
 def notFound(error):
     return'404'
     
 if __name__ == '__main__':
-    app.run(host="buildschoolprice.azurewebsites.net")
+    app.run()
