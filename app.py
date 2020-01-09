@@ -7,7 +7,7 @@ import json
 import pandas
 from flask import Flask, request, jsonify
 from flask_restful import Api
-from flask_restful import Resource
+
 
 #import pytest
 #from app import app
