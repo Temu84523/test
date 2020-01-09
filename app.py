@@ -92,7 +92,7 @@ class Spider():
         s = table.to_json(orient='records', force_ascii=False)
         
 @app.route('/press', methods=['POST'])
-def press():
+def test():
     data=request.get_json()
     global name     
     name=data['name']
