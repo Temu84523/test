@@ -98,6 +98,13 @@ def test():
     name=data['name']
     Spider().run(name)
     return s
+@app.route('/press', methods=['POST'])
+def test1():
+    data=request.get_json()
+    global name     
+    name=data['name']
+    Spider().run(name)
+
 
 @app.errorhandler(404)
 def notFound(error):
