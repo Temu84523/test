@@ -13,7 +13,7 @@ from flask import Flask, request, jsonify
 #from app import app
 
 app = Flask(__name__)
-api = Api(app)
+#api = Api(app)暫時不需要
 name = ''
 s = ''
 
